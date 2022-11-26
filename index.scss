@@ -1,0 +1,269 @@
+:root {
+    /* Colours */
+    --NESTPrimary: #28465f;
+    --secondaryPink60: #f179a5;
+
+    /* Fonts */
+    --headerFont: 'HurmeGeometricSans4', sans-serif;
+    --bodyFont: 'Muli', sans-serif;
+    /*Everything that's not a header.*/
+
+    /* Space */
+    --space0: 0;
+    --space05: 2px;
+    --space1: 4px;
+    --space2: calc(var(--space1) * 2);
+    --space3: calc(var(--space1) * 3);
+    --space4: calc(var(--space1) * 4);
+
+
+    /* Radius */
+    --radius0: 0;
+    --radius05: 2px;
+    --radius1: 4px;
+    --radius2: calc(var(--radius1) * 2);
+    /* Opacity */
+    --opacity25: 0.25;
+
+
+    --control: 14px/150% var(--bodyFont);
+    --controlBold: bold 14px/150% var(--bodyFont);
+}
+
+body {
+    background-color: var(--NESTPrimary);
+    width: 100%;
+    margin: 12px auto;
+
+    & header {
+        background-color: rgb(108, 168, 128);
+        width: 90%;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: auto auto;
+
+        & h1 {
+            color: rgb(196, 207, 213);
+            margin-left: 20px;
+            font-size: 25px;
+            display: grid;
+            align-items: center;
+            font-family: monospace;
+        }
+
+        & nav {
+            background-color: rgb(117, 108, 168);
+            display: grid;
+            grid-template-columns: auto;
+        }
+
+        & nav ul {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            /* justify-content: normal; */
+            width: 100%;
+        }
+
+        & nav ul li {
+            display: grid;
+        }
+
+        & nav ul li a {
+            text-decoration: none;
+            font-size: 30px;
+        }
+    }
+
+    & main {
+        background-color: #34568B;
+        width: 90%;
+        margin: 12px auto;
+        display: grid;
+        grid-template-columns: auto;
+
+        & section {
+            display: grid;
+            grid-template-columns: auto auto;
+            background-color: #acb1ba;
+            margin: 12px 12px;
+
+            & h2 {
+                color: rgb(196, 207, 213);
+                margin-left: 20px;
+                font-size: 25px;
+                display: grid;
+                align-items: center;
+                font-family: monospace;
+            }
+
+            & p {
+                color: rgb(196, 207, 213);
+                margin-left: 20px;
+                font-size: 20px;
+                font-family: monospace;
+            }
+        }
+
+        & article {
+            display: grid;
+            grid-template-columns: auto;
+            background-color: #3562b5;
+            grid-template-columns: auto auto;
+            margin: 12px 12px;
+
+            & h3 {
+                color: rgb(196, 207, 213);
+                margin-left: 20px;
+                font-size: 25px;
+                display: grid;
+                align-items: center;
+                font-family: monospace;
+            }
+
+            & p {
+                color: rgb(196, 207, 213);
+                margin-left: 20px;
+                font-size: 20px;
+                font-family: monospace;
+            }
+        }
+
+        & aside {
+            display: grid;
+            grid-template-columns: auto auto;
+            justify-content: flex-end;
+            background-color: #8891a2;
+            margin: 12px 12px;
+
+            & h4 {
+                color: rgb(196, 207, 213);
+                margin-left: 20px;
+                font-size: 25px;
+                display: grid;
+                align-items: center;
+                font-family: monospace;
+            }
+
+            & p {
+                color: rgb(196, 207, 213);
+                margin-left: 20px;
+                font-size: 20px;
+                font-family: monospace;
+                display: grid;
+                align-content: center;
+            }
+        }
+
+        & figure {
+            display: grid;
+            place-items: center;
+            background-color: #8891a2;
+            padding-top: 30px;
+
+            & img {
+                width: 65%;
+                height: 98%;
+
+            }
+
+            & figcaption {
+                font-size: 18px;
+                font-family: fantasy;
+                margin: 13px;
+                background: none;
+            }
+
+        }
+    }
+
+    & footer {
+        background-color: rgb(108, 168, 128);
+        width: 90%;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: auto auto;
+
+        & h1 {
+            color: rgb(196, 207, 213);
+            margin-left: 20px;
+            font-size: 25px;
+            display: grid;
+            align-items: center;
+            font-family: monospace;
+        }
+
+        & nav {
+            background-color: rgb(117, 108, 168);
+            display: grid;
+            grid-template-columns: auto;
+        }
+
+        & nav ul {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            /* justify-content: normal; */
+            width: 100%;
+        }
+
+        & nav ul li {
+            display: grid;
+        }
+
+        & nav ul li a {
+            text-decoration: none;
+            font-size: 30px;
+        }
+    }
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
+    header {
+        width: 80%;
+
+        & h1 {
+            font-size: 19px !important;
+        }
+
+        & nav {
+            display: grid;
+            grid-template-columns: auto;
+            width:50%;
+        }
+        nav ul li a {
+            text-decoration: none;
+            font-size: 14px !important;
+        }
+       
+    }
+    section p {
+        color: rgb(196, 207, 213);
+    margin-left: 20px;
+    font-size: 11px !important;
+    font-family: monospace;
+    }
+    article p {
+        color: rgb(196, 207, 213);
+        margin-left: 20px;
+        font-size: 11px !important;
+        font-family: monospace;
+    }
+     aside p {
+        font-size: 12px !important;
+    }
+    footer{
+         
+       &  h1 {
+            font-size: 11px !important;
+       }
+       & nav ul {
+        width: 86% !important;
+    }
+    & nav ul li a {
+        text-decoration: none;
+        font-size: 10px !important;
+        width: 86% !important;
+    }
+
+    } 
+
+}
